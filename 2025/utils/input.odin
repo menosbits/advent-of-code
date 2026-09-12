@@ -3,6 +3,7 @@ package utils
 import "core:fmt"
 import "core:os"
 import "core:path/filepath"
+import "core:strings"
 
 load_input :: proc(challenge: string, allocator := context.allocator) -> (string, os.Error) {
 	path := fmt.aprintf("%s/../inputs/%s", filepath.dir(#location().file_path), challenge)
@@ -11,5 +12,5 @@ load_input :: proc(challenge: string, allocator := context.allocator) -> (string
 	if err != nil {
 		return "", err
 	}
-	return string(fcontent), nil
+	return strings.trim(string(fcontent), " \n"), nil
 }
