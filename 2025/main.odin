@@ -11,4 +11,5 @@ main :: proc() {
 	fmt.printfln("Day 4 :: % 15d :: % 15d", challenges.four())
 	fmt.printfln("Day 5 :: % 15d :: % 15d", challenges.five())
 	fmt.printfln("Day 6 :: % 15d :: % 15d", challenges.six())
+	fmt.printfln("Day 7 :: % 15d :: % 15d", challenges.seven())
 }
